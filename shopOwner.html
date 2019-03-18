@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+    <script type="text/javascript">
+        function hide_fun(id){
+            
+            var divelement= document.getElementByID(id);
+            if(divelement.style.display == 'block')
+                divelement.style.display = 'none';
+        }
+    </script>
+  </head>
+<body>
+    <h2>Shop Owner Form</h2>
+     
+    <div class="container">
+        <form class="ShopOwner" action = "shop.php" method="POST"  >
+            <label for="Image"><b>Upload Image</b></label><br><br>
+            <input type="file" name="image" id="image" accept="image/*" required><br>
+           
+            <label for="UserName"><b>Full Name</b></label><br>
+            <input type="text" placeholder="Enter Username" name="UserName" required><br>
+
+            <label for="email"><b>Email</b></label><br>
+            <input type="email" placeholder="Enter Email" name="email" required><br><br>
+
+            <label for="number"><b>Mobile Number</b></label><br>
+            <input type="tel" placeholder="Enter Mobile Number" name="number"  required ><br>
+
+            <label for="ShopName"><b>Shop Name</b></label><br>
+            <input type="text" placeholder="Enter Shopname" name="ShopName" required><br>
+
+            <label for="geolocation"><b>Geolocation</b></label><br><br>
+      
+            <br><label for="desc"><b>Description</b></label><br>
+            <textarea id="desc" name="desc" placeholder="Write a description about your shop" style="height:90px"></textarea><br>
+
+            <input type="submit" name="submit" value="Submit">
+        </form>
+        
+    </div>
+   
+</body>
+</html> 
